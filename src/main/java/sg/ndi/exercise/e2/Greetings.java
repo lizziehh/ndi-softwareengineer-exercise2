@@ -56,18 +56,48 @@ public class Greetings {
   @ApiMethod(httpMethod = "post")
   public ArrayList<HelloGreeting> findGreetingByMessage(User user, @Named("message") String message) {
     // TODO Implement me.
-    return null;
+    ArrayList<HelloGreeting> list = list();
+    ArrayList<HelloGreeting> tmp = new ArrayList<HelloGreeting>();
+    int i = 0;
+    for (HelloGreeting row : list){
+          log.info("data row nya " + i + " = " + row.getMessage());
+          if (message.compareToIgnoreCase(row.getMessage().toString()) == 0){
+        	  tmp.add(row);
+              log.info("test " + i + " = " + row.getMessage());
+          }
+          i++;
+    } 
+    return tmp;
   }
   
   @ApiMethod(httpMethod = "post")
   public HelloGreeting updateGreeting(User user, HelloGreeting greeting) {
     // TODO Implement me.
-    return null;
+    try{
+    	
+    	//HelloGreeting gt = get(greeting.getKey());
+    	//gt.setMessage("Hello Eileen!");
+    	//return gt;
+    	
+    	delete(greeting.getKey());
+    	
+        HelloGreeting gt2 = new HelloGreeting();
+        gt2.setMessage("Hello Eileen!");
+        return create(gt2);
+        
+    }
+    catch(Exception e){
+	    log.info("error opo  " +e);
+	    return null;
+	}
   }
   
   public HelloGreeting getGreetingByKey(User user, @Named("key") String keyStr) {
-    // TODO Implement me.
-    return null;
+    try
+	  {
+		  return get(keyStr);
+	  } 
+	  catch(Exception e){return null;}
   }
   
   
