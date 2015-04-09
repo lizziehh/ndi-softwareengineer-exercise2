@@ -5,7 +5,7 @@ package sg.ndi.exercise.e2;
  */
 public class Constants {
 
-  public static final String WEB_CLIENT_ID = "your web client id";
+  public static final String WEB_CLIENT_ID = "636196882279-oel2at9h0sbhn9es8ujei086jtq72gor.apps.googleusercontent.com";
   
   public static final String EMAIL_SCOPE = "https://www.googleapis.com/auth/userinfo.email";
   
