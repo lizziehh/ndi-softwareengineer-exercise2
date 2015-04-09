@@ -24,7 +24,7 @@ google.devrel.samples.hello = google.devrel.samples.hello || {};
  * @type {string}
  */
 // google.devrel.samples.hello.CLIENT_ID =
-google.devrel.samples.hello.CLIENT_ID = 'your web client id';
+google.devrel.samples.hello.CLIENT_ID = '636196882279-oel2at9h0sbhn9es8ujei086jtq72gor.apps.googleusercontent.com';
 
 /**
  * Scopes used by the application.
@@ -134,6 +134,7 @@ google.devrel.samples.hello.enableButtons = function() {
 
 	document.getElementById('listGreetings').onclick = function() {
 		google.devrel.samples.hello.listGreetings().then(function(resp) {
+			google.devrel.samples.hello.setupData();
 			google.devrel.samples.hello.printResults('list', resp.result);
 		});
 	}
@@ -147,7 +148,7 @@ google.devrel.samples.hello.enableButtons = function() {
 				return;
 			}
 			for(var i = 0; i < greetingsToElizabeth.items.length; i++) {
-				greetingToElizabeth.message = 'Hello Eileen!';
+				//greetingToElizabeth.message = 'Hello Eileen!';
 				google.devrel.samples.hello.updateGreeting(greetingsToElizabeth.items[i]).then(function(resp) {
 					var greetingToEileen = resp.result;
 					google.devrel.samples.hello.printResult('updateGreeting', greetingToEileen);
