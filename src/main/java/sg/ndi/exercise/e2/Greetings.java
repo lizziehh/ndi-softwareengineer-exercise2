@@ -73,7 +73,7 @@ public class Greetings {
   @ApiMethod(httpMethod = "post")
   public HelloGreeting updateGreeting(User user, HelloGreeting greeting) {
     // TODO Implement me.
-	//log.info("zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz");
+
     try{
     	
     	//HelloGreeting gt = get(greeting.getKey());
@@ -88,14 +88,18 @@ public class Greetings {
         
     }
     catch(Exception e){
-	log.info("error opo  " +e);
-	return null;
+
+	    log.info("error opo  " +e);
+	    return null;
+
 	}
   }
   
   public HelloGreeting getGreetingByKey(User user, @Named("key") String keyStr) {
+
     // TODO Implement me.
 	  try
+
 	  {
 		  return get(keyStr);
 	  } 

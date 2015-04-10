@@ -153,9 +153,12 @@ google.devrel.samples.hello.enableButtons = function() {
 			
 			for(var i = 0; i < greetingsToElizabeth.items.length; i++) {
 				//greetingToElizabeth.message = 'Hello Eileen!';
+<<<<<<< HEAD
 				//console.log(greetingToElizabeth);
 				console.log('============================');
 				console.log(greetingsToElizabeth.items[i]);
+=======
+>>>>>>> 31d9debaa25f6ca59f198f599cc7495e6f61b79f
 				google.devrel.samples.hello.updateGreeting(greetingsToElizabeth.items[i]).then(function(resp) {
 					var greetingToEileen = resp.result;
 					console.log('uuuuuuuuuuuuuuuuuuuuuuuuuuuu');
