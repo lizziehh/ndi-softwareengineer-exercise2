@@ -24,7 +24,7 @@ google.devrel.samples.hello = google.devrel.samples.hello || {};
  * @type {string}
  */
 // google.devrel.samples.hello.CLIENT_ID =
-google.devrel.samples.hello.CLIENT_ID = 'your web client id';
+google.devrel.samples.hello.CLIENT_ID = '636196882279-oel2at9h0sbhn9es8ujei086jtq72gor.apps.googleusercontent.com';
 
 /**
  * Scopes used by the application.
@@ -134,6 +134,7 @@ google.devrel.samples.hello.enableButtons = function() {
 
 	document.getElementById('listGreetings').onclick = function() {
 		google.devrel.samples.hello.listGreetings().then(function(resp) {
+			google.devrel.samples.hello.setupData();
 			google.devrel.samples.hello.printResults('list', resp.result);
 		});
 	}
@@ -141,18 +142,29 @@ google.devrel.samples.hello.enableButtons = function() {
 	document.getElementById('testCase').onclick = function() {
 		google.devrel.samples.hello.findGreetingByMessage('Hello Elizabeth!').then(function(resp) {
 			var greetingsToElizabeth = resp.result;
+			
 			google.devrel.samples.hello.printResults('findGreetingByMessage', greetingsToElizabeth);
 			if(!greetingsToElizabeth || !greetingsToElizabeth.items || greetingsToElizabeth.items.length < 1) {
 				google.devrel.samples.hello.printLog('test case failed!!');
+				//google.devrel.samples.hello.printLog('xtt');
 				return;
 			}
+			//google.devrel.samples.hello.printLog('base nya test = ' + greetingsToElizabeth.items.length);
+			
 			for(var i = 0; i < greetingsToElizabeth.items.length; i++) {
-				greetingToElizabeth.message = 'Hello Eileen!';
+				//greetingToElizabeth.message = 'Hello Eileen!';
+				//console.log(greetingToElizabeth);
+				console.log('============================');
+				console.log(greetingsToElizabeth.items[i]);
 				google.devrel.samples.hello.updateGreeting(greetingsToElizabeth.items[i]).then(function(resp) {
 					var greetingToEileen = resp.result;
+					console.log('uuuuuuuuuuuuuuuuuuuuuuuuuuuu');
+					console.log(greetingToEileen);
+					console.log('uuuuuuuuuuuuuuuuuuuuuuuuuuuu');
 					google.devrel.samples.hello.printResult('updateGreeting', greetingToEileen);
 					if(!greetingToEileen) {
 						google.devrel.samples.hello.printLog('test case failed!!');
+						//google.devrel.samples.hello.printLog('Y');
 						return {
 							then : function(f) {
 								// f is ignored.
@@ -162,11 +174,15 @@ google.devrel.samples.hello.enableButtons = function() {
 					return google.devrel.samples.hello.getGreetingByKey(greetingToEileen.key);
 				}).then(function(resp) {
 					var greetingToEileen = resp.result;
+					console.log(resp.result);
+					console.log('aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa');
+					console.log(greetingToEileen);
 					google.devrel.samples.hello.printResult('getGreetingByKey', greetingToEileen);
 					if(greetingToEileen && greetingToEileen.message === 'Hello Eileen!') {
 						google.devrel.samples.hello.printLog('test case passed!!');
 					} else {
 						google.devrel.samples.hello.printLog('test case failed!!');
+						//google.devrel.samples.hello.printLog('z');
 					}
 				});
 			}
