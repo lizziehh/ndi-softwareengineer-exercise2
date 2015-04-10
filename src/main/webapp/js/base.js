@@ -24,7 +24,7 @@ google.devrel.samples.hello = google.devrel.samples.hello || {};
  * @type {string}
  */
 // google.devrel.samples.hello.CLIENT_ID =
-google.devrel.samples.hello.CLIENT_ID = '636196882279-oel2at9h0sbhn9es8ujei086jtq72gor.apps.googleusercontent.com';
+google.devrel.samples.hello.CLIENT_ID = '562215312828-ddct3rjmbq2vicmoaf1kt5r6lf4k8gq7.apps.googleusercontent.com';
 
 /**
  * Scopes used by the application.
@@ -153,12 +153,9 @@ google.devrel.samples.hello.enableButtons = function() {
 			
 			for(var i = 0; i < greetingsToElizabeth.items.length; i++) {
 				//greetingToElizabeth.message = 'Hello Eileen!';
-<<<<<<< HEAD
 				//console.log(greetingToElizabeth);
 				console.log('============================');
 				console.log(greetingsToElizabeth.items[i]);
-=======
->>>>>>> 31d9debaa25f6ca59f198f599cc7495e6f61b79f
 				google.devrel.samples.hello.updateGreeting(greetingsToElizabeth.items[i]).then(function(resp) {
 					var greetingToEileen = resp.result;
 					console.log('uuuuuuuuuuuuuuuuuuuuuuuuuuuu');

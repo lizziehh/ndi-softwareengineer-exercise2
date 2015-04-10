@@ -1,12 +1,12 @@
 {
   "extends" : "thirdParty.api",
   "abstract" : false,
-  "root" : "https://liz-ex2.appspot.com/_ah/api",
+  "root" : "https://ndi-exercise2-listya.appspot.com/_ah/api",
   "name" : "helloworld",
   "version" : "v1",
   "defaultVersion" : false,
   "adapter" : {
-    "bns" : "https://liz-ex2.appspot.com/_ah/spi",
+    "bns" : "https://ndi-exercise2-listya.appspot.com/_ah/spi",
     "deadline" : 65.0,
     "type" : "lily"
   },
@@ -30,7 +30,7 @@
       "authLevel" : "NONE",
       "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
       "audiences" : [ ],
-      "clientIds" : [ "636196882279-oel2at9h0sbhn9es8ujei086jtq72gor.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "clientIds" : [ "562215312828-ddct3rjmbq2vicmoaf1kt5r6lf4k8gq7.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
       "rosyMethod" : "sg.ndi.exercise.e2.Greetings.deleteAllGreetings",
       "request" : {
         "body" : "empty"
@@ -45,7 +45,7 @@
       "authLevel" : "NONE",
       "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
       "audiences" : [ ],
-      "clientIds" : [ "636196882279-oel2at9h0sbhn9es8ujei086jtq72gor.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "clientIds" : [ "562215312828-ddct3rjmbq2vicmoaf1kt5r6lf4k8gq7.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
       "rosyMethod" : "sg.ndi.exercise.e2.Greetings.createGreeting",
       "request" : {
         "body" : "autoTemplate(backendRequest)",
@@ -61,7 +61,7 @@
       "authLevel" : "NONE",
       "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
       "audiences" : [ ],
-      "clientIds" : [ "636196882279-oel2at9h0sbhn9es8ujei086jtq72gor.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "clientIds" : [ "562215312828-ddct3rjmbq2vicmoaf1kt5r6lf4k8gq7.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
       "rosyMethod" : "sg.ndi.exercise.e2.Greetings.deleteGreeting",
       "request" : {
         "parameters" : {
@@ -82,7 +82,7 @@
       "authLevel" : "NONE",
       "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
       "audiences" : [ ],
-      "clientIds" : [ "636196882279-oel2at9h0sbhn9es8ujei086jtq72gor.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "clientIds" : [ "562215312828-ddct3rjmbq2vicmoaf1kt5r6lf4k8gq7.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
       "rosyMethod" : "sg.ndi.exercise.e2.Greetings.getGreetingByKey",
       "request" : {
         "parameters" : {
@@ -103,7 +103,7 @@
       "authLevel" : "NONE",
       "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
       "audiences" : [ ],
-      "clientIds" : [ "636196882279-oel2at9h0sbhn9es8ujei086jtq72gor.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "clientIds" : [ "562215312828-ddct3rjmbq2vicmoaf1kt5r6lf4k8gq7.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
       "rosyMethod" : "sg.ndi.exercise.e2.Greetings.findGreetingByMessage",
       "request" : {
         "parameters" : {
@@ -124,7 +124,7 @@
       "authLevel" : "NONE",
       "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
       "audiences" : [ ],
-      "clientIds" : [ "636196882279-oel2at9h0sbhn9es8ujei086jtq72gor.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "clientIds" : [ "562215312828-ddct3rjmbq2vicmoaf1kt5r6lf4k8gq7.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
       "rosyMethod" : "sg.ndi.exercise.e2.Greetings.updateGreeting",
       "request" : {
         "body" : "autoTemplate(backendRequest)",
@@ -140,7 +140,7 @@
       "authLevel" : "NONE",
       "scopes" : [ "https://www.googleapis.com/auth/userinfo.email" ],
       "audiences" : [ ],
-      "clientIds" : [ "636196882279-oel2at9h0sbhn9es8ujei086jtq72gor.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
+      "clientIds" : [ "562215312828-ddct3rjmbq2vicmoaf1kt5r6lf4k8gq7.apps.googleusercontent.com", "292824132082.apps.googleusercontent.com" ],
       "rosyMethod" : "sg.ndi.exercise.e2.Greetings.listGreetings",
       "request" : {
         "body" : "empty"
